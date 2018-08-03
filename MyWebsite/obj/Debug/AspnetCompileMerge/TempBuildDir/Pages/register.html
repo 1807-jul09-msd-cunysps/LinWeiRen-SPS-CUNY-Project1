@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-grid.css" rel="stylesheet" />
+    <link href="../Styles/Style.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-3.3.1.js"></script>
+    <script src="../Scripts/Functions.js"></script>
+    <title>Register</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron bg-dark text-light text-center">
+            <h1>Join Me Registration</h1>
+        </div>
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="about.html">About Me</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="contact.html">Contact Me</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto ">
+                <li class="nav-item active join-me">
+                    <a class="nav-link" href="register.html">Join Me</a>
+                </li>
+            </ul>
+        </nav>
+        <form action="Success.html" id="myform" onsubmit="return formValidation()" method="get">
+            <fieldset class="top-buffer">
+                <legend class="bg-dark text-white text-md-center">Personal Information</legend>
+                <div class="form-group">
+                    <label for="firstName" class="col-form-label">First Name: </label>
+                    <input class="form-control col-4" type="text" id="firstName" placeholder="Enter First Name" />
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name: </label>
+                    <input class="form-control col-4 bottom-buffer" type="text" id="lastName" placeholder="Enter Last Name" />
+                </div>
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input class="form-control col-2 bottom-buffer" type="number" id="age" placeholder="Enter Age"/>
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label">Gender: </label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" value="male">
+                        <label class="form-check-label">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" value="female">
+                        <label class="form-check-label">Female</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" value="other">
+                        <label class="form-check-label">Other</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend class="bg-dark text-white text-md-center">Current Address</legend>
+                <div class="form-group">
+                    <label for="address1" class="col-form-label">Address line 1:</label>
+                    <input class="form-control col-5" type="text" id="address1" placeholder="Enter address line 1" />
+                </div>
+                <div class="form-group">
+                    <label for="address2">Address line 2:</label>
+                    <input class="form-control col-5" type="text" id="address2" placeholder="Enter address line 2" />
+                </div>
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label for="city" class="col-form-label right-buffer">City: </label>
+                        <input class="form-control right-buffer" type="text" id="city" placeholder="Enter City" />
+                    </div>
+                    <div class="form-group">
+                        <label for="state" class="col-form-label right-buffer">State:</label>
+                        <input class="form-control right-buffer" type="text" id="state" placeholder="Enter State" />
+                    </div>
+                    <div class="form-group">
+                        <label for="country" class="col-form-label right-buffer">Country:</label>
+                        <select class="form-control" id="country">
+                            <option value="US">US</option>
+                            <option value="UK">UK</option>
+                            <option value="IND">IND</option>
+                            <option value="PAK">PAK</option>
+                            <option value="AUS">AUS</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group form-inline top-buffer">
+                    <label for="zipcode" class="col-form-label right-buffer">ZipCode: </label>
+                    <input class="form-control col-2 right-buffer" type="number" id="zipcode" onblur="AutoFillOnZip('zipcode', 'city', 'state')" placeholder="Enter Zipcode" />
+                </div>
+                <div class="form-group">
+                    <label class="col-form">Permenant Address?</label>
+                    <input type="checkbox" class="form-control-lg" id="input_permanent" checked onchange="AddPermanent()" />
+                </div>
+            </fieldset>
+            <div id="perm" style="display:none">
+                <fieldset>
+                    <legend class="bg-dark text-white text-md-center">Permanent Address</legend>
+                    <div class="form-group">
+                        <label for="perm_address1" class="col-form-label">Address line 1:</label>
+                        <input class="form-control col-5" type="text" id="perm_address1" placeholder="Enter address line 1" />
+                    </div>
+                    <div class="form-group">
+                        <label for="perm_address2">Address line 2:</label>
+                        <input class="form-control col-5" type="text" id="perm_address2" placeholder="Enter address line 2" />
+                    </div>
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <label for="perm_city" class="col-form-label right-buffer">City: </label>
+                            <input class="form-control right-buffer" type="text" id="perm_city" placeholder="Enter City" />
+                        </div>
+                        <div class="form-group">
+                            <label for="perm_state" class="col-form-label right-buffer">State:</label>
+                            <input class="form-control right-buffer" type="text" id="perm_state" placeholder="Enter State" />
+                        </div>
+                        <div class="form-group">
+                            <label for="perm_country" class="col-form-label right-buffer">Country:</label>
+                            <select class="form-control" id="perm_country">
+                                <option value="US">US</option>
+                                <option value="UK">UK</option>
+                                <option value="IND">IND</option>
+                                <option value="PAK">PAK</option>
+                                <option value="AUS">AUS</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group form-inline top-buffer">
+                        <label for="perm_zipcode" class="col-form-label right-buffer">ZipCode: </label>
+                        <input class="form-control col-2" type="number" id="perm_zipcode" onblur="AutoFillOnZip('perm_zipcode','perm_city','perm_state')" placeholder="Enter Zipcode" />
+                    </div>
+                </fieldset>
+            </div>
+            <fieldset>
+                <legend class="bg-dark text-white text-md-center">Contact Details</legend>
+                <div class="form-group">
+                    <label for="countryCode">Country Code:</label>
+                    <select class="form-control col-1" id="countryCode">
+                        <option value="US">1</option>
+                        <option value="UK">44</option>
+                        <option value="IND">91</option>
+                        <option value="PAK">92</option>
+                        <option value="AUS">61</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="areaCode">Area Code: </label>
+                    <input class="form-control col-2" type="number" id="areaCode" placeholder="Enter areacode" />
+                </div>
+                <div class="form-group">
+                    <label for="number">Phone: </label>
+                    <input class="form-control col-2 bottom-buffer" type="number" id="phone" placeholder="Enter phone number" />
+                </div>
+                <div class="form-group form-inline">
+                    <label for="ext" class="right-buffer col-form-label">Ext: </label>
+                    <input class="form-control col-1 right-buffer" type="number" id="ext" placeholder="Enter extension" />
+                    <label for="email" class="right-buffer col-form-label">Email: </label>
+                    <input class="form-control col-4 right-buffer" type="email" id="email" placeholder="Enter Email" />
+                </div>
+                <div class="form-group">
+                    <button class="btn-primary btn-lg btn-block">Submit</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
