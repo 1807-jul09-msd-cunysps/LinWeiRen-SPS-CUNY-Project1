@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="PhoneAppDatabaseContext-Web.config Connection String" description="PhoneAppDatabaseContext Connection String used in web.config by the application to access the database." defaultValue="data source=rev-azurework.database.windows.net;initial catalog=PhoneDirectoryApp;persist security info=True;user id=ConsoleLogin;password=SecretPass!;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Jeff\\OneDrive\\Work\\Project\\LinWeiRen-SPS-CUNY-Project0\\PhoneDirectoryApp\\PhoneAppAPI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='PhoneAppDatabaseContext']/@connectionString" />
+  </parameter>
+</parameters>

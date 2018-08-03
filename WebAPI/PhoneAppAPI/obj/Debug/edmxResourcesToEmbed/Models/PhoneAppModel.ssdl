@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PhoneDirectoryAppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="mapped_Person_Address">
+    <Key>
+      <PropertyRef Name="Pid" />
+      <PropertyRef Name="Aid" />
+    </Key>
+    <Property Name="Pid" Type="bigint" Nullable="false" />
+    <Property Name="Aid" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="Pid" />
+    </Key>
+    <Property Name="Pid" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstName" Type="varchar" MaxLength="50" />
+    <Property Name="lastName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Person_address">
+    <Key>
+      <PropertyRef Name="Aid" />
+    </Key>
+    <Property Name="Aid" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="houseNum" Type="varchar" MaxLength="20" />
+    <Property Name="street" Type="varchar" MaxLength="30" />
+    <Property Name="address_city" Type="varchar" MaxLength="30" />
+    <Property Name="address_state" Type="varchar" MaxLength="30" />
+    <Property Name="address_country" Type="varchar" MaxLength="30" />
+    <Property Name="zipcode" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Person_phone">
+    <Key>
+      <PropertyRef Name="PHid" />
+    </Key>
+    <Property Name="PHid" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Pid" Type="bigint" Nullable="false" />
+    <Property Name="countryCode" Type="int" />
+    <Property Name="areaCode" Type="varchar" MaxLength="20" />
+    <Property Name="number" Type="varchar" MaxLength="30" />
+    <Property Name="ext" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK__mapped_Pers__Aid__778AC167">
+    <End Role="Person_address" Type="Self.Person_address" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="mapped_Person_Address" Type="Self.mapped_Person_Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person_address">
+        <PropertyRef Name="Aid" />
+      </Principal>
+      <Dependent Role="mapped_Person_Address">
+        <PropertyRef Name="Aid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__mapped_Pers__Pid__76969D2E">
+    <End Role="Person" Type="Self.Person" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="mapped_Person_Address" Type="Self.mapped_Person_Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="Pid" />
+      </Principal>
+      <Dependent Role="mapped_Person_Address">
+        <PropertyRef Name="Pid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_p">
+    <End Role="Person" Type="Self.Person" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Person_phone" Type="Self.Person_phone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="Pid" />
+      </Principal>
+      <Dependent Role="Person_phone">
+        <PropertyRef Name="Pid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PhoneDirectoryAppModelStoreContainer">
+    <EntitySet Name="mapped_Person_Address" EntityType="Self.mapped_Person_Address" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Person" EntityType="Self.Person" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Person_address" EntityType="Self.Person_address" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Person_phone" EntityType="Self.Person_phone" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__mapped_Pers__Aid__778AC167" Association="Self.FK__mapped_Pers__Aid__778AC167">
+      <End Role="Person_address" EntitySet="Person_address" />
+      <End Role="mapped_Person_Address" EntitySet="mapped_Person_Address" />
+    </AssociationSet>
+    <AssociationSet Name="FK__mapped_Pers__Pid__76969D2E" Association="Self.FK__mapped_Pers__Pid__76969D2E">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="mapped_Person_Address" EntitySet="mapped_Person_Address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_p" Association="Self.FK_Person_p">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="Person_phone" EntitySet="Person_phone" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

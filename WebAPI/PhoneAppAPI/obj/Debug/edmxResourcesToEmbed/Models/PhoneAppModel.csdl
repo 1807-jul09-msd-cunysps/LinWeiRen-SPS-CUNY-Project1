@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PhoneDirectoryAppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="Pid" />
+    </Key>
+    <Property Name="Pid" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="lastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Person_phone" Relationship="Self.FK_Person_p" FromRole="Person" ToRole="Person_phone" />
+    <NavigationProperty Name="Person_address" Relationship="Self.mapped_Person_Address" FromRole="Person" ToRole="Person_address" />
+  </EntityType>
+  <EntityType Name="Person_address">
+    <Key>
+      <PropertyRef Name="Aid" />
+    </Key>
+    <Property Name="Aid" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="houseNum" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="street" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="address_city" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="address_state" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="address_country" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="zipcode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="People" Relationship="Self.mapped_Person_Address" FromRole="Person_address" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="Person_phone">
+    <Key>
+      <PropertyRef Name="PHid" />
+    </Key>
+    <Property Name="PHid" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="countryCode" Type="Int32" />
+    <Property Name="areaCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="number" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ext" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Person" Relationship="Self.FK_Person_p" FromRole="Person_phone" ToRole="Person" />
+  </EntityType>
+  <Association Name="FK_Person_p">
+    <End Role="Person" Type="Self.Person" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Person_phone" Type="Self.Person_phone" Multiplicity="*" />
+  </Association>
+  <Association Name="mapped_Person_Address">
+    <End Role="Person_address" Type="Self.Person_address" Multiplicity="*" />
+    <End Role="Person" Type="Self.Person" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="PhoneDirectoryAppEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="People" EntityType="Self.Person" />
+    <EntitySet Name="Person_address" EntityType="Self.Person_address" />
+    <EntitySet Name="Person_phone" EntityType="Self.Person_phone" />
+    <AssociationSet Name="FK_Person_p" Association="Self.FK_Person_p">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Person_phone" EntitySet="Person_phone" />
+    </AssociationSet>
+    <AssociationSet Name="mapped_Person_Address" Association="Self.mapped_Person_Address">
+      <End Role="Person_address" EntitySet="Person_address" />
+      <End Role="Person" EntitySet="People" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

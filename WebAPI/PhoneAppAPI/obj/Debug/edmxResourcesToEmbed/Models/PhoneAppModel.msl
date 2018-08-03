@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PhoneDirectoryAppModelStoreContainer" CdmEntityContainer="PhoneDirectoryAppEntities">
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="PhoneDirectoryAppModel.Person">
+        <MappingFragment StoreEntitySet="Person">
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Person_address">
+      <EntityTypeMapping TypeName="PhoneDirectoryAppModel.Person_address">
+        <MappingFragment StoreEntitySet="Person_address">
+          <ScalarProperty Name="Aid" ColumnName="Aid" />
+          <ScalarProperty Name="houseNum" ColumnName="houseNum" />
+          <ScalarProperty Name="street" ColumnName="street" />
+          <ScalarProperty Name="address_city" ColumnName="address_city" />
+          <ScalarProperty Name="address_state" ColumnName="address_state" />
+          <ScalarProperty Name="address_country" ColumnName="address_country" />
+          <ScalarProperty Name="zipcode" ColumnName="zipcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Person_phone">
+      <EntityTypeMapping TypeName="PhoneDirectoryAppModel.Person_phone">
+        <MappingFragment StoreEntitySet="Person_phone">
+          <ScalarProperty Name="PHid" ColumnName="PHid" />
+          <ScalarProperty Name="countryCode" ColumnName="countryCode" />
+          <ScalarProperty Name="areaCode" ColumnName="areaCode" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="ext" ColumnName="ext" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="FK_Person_p" TypeName="PhoneDirectoryAppModel.FK_Person_p" StoreEntitySet="Person_phone">
+      <EndProperty Name="Person">
+        <ScalarProperty Name="Pid" ColumnName="Pid" />
+      </EndProperty>
+      <EndProperty Name="Person_phone">
+        <ScalarProperty Name="PHid" ColumnName="PHid" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="mapped_Person_Address" TypeName="PhoneDirectoryAppModel.mapped_Person_Address" StoreEntitySet="mapped_Person_Address">
+      <EndProperty Name="Person_address">
+        <ScalarProperty Name="Aid" ColumnName="Aid" />
+      </EndProperty>
+      <EndProperty Name="Person">
+        <ScalarProperty Name="Pid" ColumnName="Pid" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

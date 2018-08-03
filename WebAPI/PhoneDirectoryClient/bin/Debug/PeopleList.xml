@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<ArrayOfPerson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Person>
+    <Pid>636672520129070988</Pid>
+    <firstName>DAVID</firstName>
+    <lastName>CHEN</lastName>
+    <address>
+      <Pid>636672520129070988</Pid>
+      <houseNum>111</houseNum>
+      <street>MAIN ST</street>
+      <city>NEW YORK</city>
+      <State>NY</State>
+      <Country>US</Country>
+      <zipcode>11000</zipcode>
+    </address>
+    <phone>
+      <Pid>636672520129070988</Pid>
+      <countryCode>1</countryCode>
+      <areaCode>212</areaCode>
+      <number>2223333</number>
+      <ext>101</ext>
+    </phone>
+  </Person>
+  <Person>
+    <Pid>636672529603637613</Pid>
+    <firstName>LINWEI</firstName>
+    <lastName>REN</lastName>
+    <address>
+      <Pid>636672529603637613</Pid>
+      <houseNum>13270</houseNum>
+      <street>SANFORD AVE</street>
+      <city>FLUSHING</city>
+      <State>NY</State>
+      <Country>US</Country>
+      <zipcode>11355</zipcode>
+    </address>
+    <phone>
+      <Pid>636672529603637613</Pid>
+      <countryCode>1</countryCode>
+      <areaCode>646</areaCode>
+      <number>7560666</number>
+      <ext />
+    </phone>
+  </Person>
+</ArrayOfPerson>
