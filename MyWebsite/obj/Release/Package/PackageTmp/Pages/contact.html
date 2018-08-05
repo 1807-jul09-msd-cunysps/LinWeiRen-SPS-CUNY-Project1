@@ -4,15 +4,68 @@
     <meta charset="utf-8" />
     <link href="../Content/bootstrap.css" rel="stylesheet" />
     <link href="../Content/bootstrap-grid.css" rel="stylesheet" />
+    <link href="../Styles/Style.css" rel="stylesheet" />
+    <script src="../Scripts/Functions.js"></script>
+    <script src="../Scripts/jquery-3.3.1.js"></script>
     <title>Contact Me</title>
 </head>
 <body>
-    <div class="input-group">
-        <form action="" method="get">
-            <fieldset>
-                <legend></legend>
-                <div class="form-group row"></div>
-            </fieldset>
+    <div class="container-fluid">
+        <div class="jumbotron bg-dark text-light text-center">
+            <h1>Contact Me</h1>
+        </div>
+        <nav class="navbar navbar-expand navbar-dark bg-dark rounded">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="about.html">About Me</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="contact.html">Contact Me</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto ">
+                <li class="nav-item active join-me">
+                    <a class="nav-link" href="register.html">Join Me</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="test">
+        </div>
+        <div class="row mt-lg-5 justify-content-center">
+            <div class="col-lg-6 jumbotron text-center bg-dark text-light font-weight-bold">
+                <p>Address: 4551 Wayside Lane, Richmond, CA 94801</p>
+                <p>Phone: 212-666-9999</p>
+                <p>Email: thisisfake@email.com</p>
+            </div>
+        </div>
+
+        <form onsubmit="sendContactMessage(); return false;">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="form-group form-inline">
+                        <label class="mr-2 col-form-label" for="full_name">Name: </label>
+                        <input class="form-control col-6" type="text" id="full_name" placeholder="Enter your name" required />
+                    </div>
+                    <div class="form-group form-inline">
+                        <label class="mr-2 col-form-label" for="email">Email: </label>
+                        <input class="form-control col-8" type="text" id="email" placeholder="Enter your Email" required />
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-2 col-form-label" for="full_message">Message:</label>
+                        <textarea rows="20" cols="50" style="resize:none" class="form-control" type="text" id="full_message" required></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <div class="form-group">
+                        <button class="col-2 btn-primary btn-lg">SEND</button>
+                    </div>
+                </div>
+            </div>
         </form>
     </div>
 </body>

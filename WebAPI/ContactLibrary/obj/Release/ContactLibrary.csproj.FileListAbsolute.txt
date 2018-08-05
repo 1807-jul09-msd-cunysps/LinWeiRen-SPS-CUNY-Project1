@@ -11,3 +11,16 @@ C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project0\PhoneDirectoryAp
 C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project0\PhoneDirectoryApp\ContactLibrary\obj\Release\ContactLibrary.csproj.CopyComplete
 C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project0\PhoneDirectoryApp\ContactLibrary\obj\Release\ContactLibrary.dll
 C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project0\PhoneDirectoryApp\ContactLibrary\obj\Release\ContactLibrary.pdb
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\bin\Release\NLog.config
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\bin\Release\ContactLibrary.dll.config
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\bin\Release\ContactLibrary.dll
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\bin\Release\ContactLibrary.pdb
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\bin\Release\EntityFramework.dll
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\bin\Release\EntityFramework.xml
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\obj\Release\ContactLibrary.csprojAssemblyReference.cache
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\obj\Release\ContactLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\obj\Release\ContactLibrary.csproj.CopyComplete
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\obj\Release\ContactLibrary.dll
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\obj\Release\ContactLibrary.pdb

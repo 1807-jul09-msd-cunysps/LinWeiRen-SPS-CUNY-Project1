@@ -32,6 +32,8 @@
                 </li>
             </ul>
         </nav>
+        <div id="test">
+        </div>
         <div class="row mt-lg-5 justify-content-center">
             <div class="col-lg-6 jumbotron text-center bg-dark text-light font-weight-bold">
                 <p>Address: 4551 Wayside Lane, Richmond, CA 94801</p>
@@ -40,20 +42,20 @@
             </div>
         </div>
 
-        <form action="success.html" method="get">
+        <form onsubmit="sendContactMessage(); return false;">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="form-group form-inline">
-                        <label class="mr-2 col-form-label" for="name">Name: </label>
-                        <input class="form-control col-6" type="text" id="name" placeholder="Enter your name" required />
+                        <label class="mr-2 col-form-label" for="full_name">Name: </label>
+                        <input class="form-control col-6" type="text" id="full_name" placeholder="Enter your name" required />
                     </div>
                     <div class="form-group form-inline">
                         <label class="mr-2 col-form-label" for="email">Email: </label>
                         <input class="form-control col-8" type="text" id="email" placeholder="Enter your Email" required />
                     </div>
                     <div class="form-group">
-                        <label class="mb-2 col-form-label" for="message">Message:</label>
-                        <textarea rows="20" cols="50" style="resize:none" class="form-control" type="text" id="message" required></textarea>
+                        <label class="mb-2 col-form-label" for="full_message">Message:</label>
+                        <textarea rows="20" cols="50" style="resize:none" class="form-control" type="text" id="full_message" required></textarea>
                     </div>
                 </div>
             </div>

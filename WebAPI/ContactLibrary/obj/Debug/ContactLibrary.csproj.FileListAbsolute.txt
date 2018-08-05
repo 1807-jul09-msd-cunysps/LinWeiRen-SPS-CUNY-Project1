@@ -26,3 +26,16 @@ C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project0\PhoneDirectoryAp
 C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project0\PhoneDirectoryApp\ContactLibrary\obj\Debug\ContactLibrary.csproj.CopyComplete
 C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project0\PhoneDirectoryApp\ContactLibrary\obj\Debug\ContactLibrary.dll
 C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project0\PhoneDirectoryApp\ContactLibrary\obj\Debug\ContactLibrary.pdb
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\bin\Debug\NLog.config
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\bin\Debug\ContactLibrary.dll.config
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\bin\Debug\ContactLibrary.dll
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\bin\Debug\ContactLibrary.pdb
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\bin\Debug\EntityFramework.dll
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\bin\Debug\EntityFramework.xml
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\obj\Debug\ContactLibrary.csprojAssemblyReference.cache
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\obj\Debug\ContactLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\obj\Debug\ContactLibrary.csproj.CopyComplete
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\obj\Debug\ContactLibrary.dll
+C:\Users\Jeff\OneDrive\Work\Project\LinWeiRen-SPS-CUNY-Project1\WebAPI\ContactLibrary\obj\Debug\ContactLibrary.pdb

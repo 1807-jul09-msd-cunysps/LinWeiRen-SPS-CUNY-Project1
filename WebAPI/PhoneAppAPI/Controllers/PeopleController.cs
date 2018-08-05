@@ -21,18 +21,22 @@ namespace PhoneAppAPI.Controllers
 
         }
         [HttpPost]
-        public HttpResponseMessage Post([FromBody]DeserializedPerson person)
+        public HttpResponseMessage Post([FromBody]Person person)
         {
-            try
+            using (PhoneAppDatabaseContext db = new PhoneAppDatabaseContext())
             {
-                DatabaseAction.AddNewContact(person);
-                DatabaseAction.Save();
-                var message = Request.CreateResponse(HttpStatusCode.Created,person);
-                return message;
-            }
-            catch (Exception ex)
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+                try
+                {
+                    db.People.Add(person);
+                    db.SaveChanges();
+                    var message = Request.CreateResponse(HttpStatusCode.Created);
+                    return message;
+                }
+                catch(Exception ex)
+                {
+                    var message = Request.CreateResponse(HttpStatusCode.BadRequest, ex);
+                    return message;
+                }
             }
         }
     }

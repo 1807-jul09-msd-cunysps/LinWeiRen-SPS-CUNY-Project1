@@ -17,7 +17,7 @@ namespace ContactLibrary
 
         public int? areaCode { get; set; }
 
-        public int? number { get; set; }
+        public long number { get; set; }
 
         public int? ext { get; set; }
 

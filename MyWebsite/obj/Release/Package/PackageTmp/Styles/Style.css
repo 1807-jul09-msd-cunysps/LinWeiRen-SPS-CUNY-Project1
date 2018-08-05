@@ -1,5 +1,5 @@
 ﻿.nav-item:hover{
-    background-color:steelblue;
+    background-color:dodgerblue;
     border-radius:5px;
 }
 .join-me {
@@ -12,4 +12,21 @@ img{
     display:block;
     margin-left:auto;
     margin-right:auto;
+}
+
+.btn-primary{
+    background-color:orangered;
+    border:none;
+}
+
+.mycolor{
+    background-color:orangered;
+}
+
+.hide{
+    display:none;
+}
+
+.home-footer:hover{
+    background-color:dodgerblue;
 }
